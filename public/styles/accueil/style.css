@@ -162,4 +162,28 @@ h6 {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
 }
+
+/* Grands ecrans */
+@media only screen and (min-width: 768px) {
+  .fonctionnement {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .box-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .restaurant-box {
+    width: 520px;
+  }
+  .restaurants h2 {
+    text-align: center;
+    font-size: 48px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

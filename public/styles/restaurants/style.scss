@@ -84,3 +84,17 @@ hr {
 .first {
     margin-top: 24px;
 }
+
+
+/*  Ecrans grande taille */
+
+@media only screen and (min-width: 768px){
+    .banner {
+        height: 500px;
+        background-position: center;
+    }
+    .menu {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
