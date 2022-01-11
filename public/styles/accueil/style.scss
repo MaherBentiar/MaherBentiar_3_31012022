@@ -1,28 +1,114 @@
-@import '../general/variables.scss';
+@import "../general/variables.scss";
+@import "../general/general.scss";
 * {
-    font-family: 'Roboto';
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto";
 }
 .hero {
-        background-color: $gray;
-        padding: 32px 24px;
-    h2 {
-        font-family: 'Roboto';
-        text-align: center;
-        margin: 0;
-    }
-    p {
-        text-align: center;
-    }
-    button {
-        display: block;
-        margin: auto;
-        cursor: pointer;
-        border: none;
-        border-radius: 30px;
-        padding: 16px;
-        font-weight: 900;
-        background: linear-gradient($Secondaire, $Primaire);
-        color: white;
+  background-color: $gray;
+  padding: 32px 24px;
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+  p {
+    text-align: center;
+  }
+  button {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    padding: 16px;
+    font-weight: 900;
+    background: linear-gradient($Secondaire, $Primaire);
+    color: white;
+  }
+}
 
-    }
+.fonctionnement {
+  padding: 16px;
+}
+.fonctionnement-box {
+  position: relative;
+  background: $gray;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  border-radius: 24px;
+  padding: 10px 0;
+  span {
+    position: absolute;
+    left: -20px;
+    background: $Primaire;
+    border-radius: 50%;
+    min-width: 24px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  i,
+  p {
+    margin-left: 40px;
+  }
+}
+.gray {
+  color: #7e7e7e;
+}
+.primary {
+  color: $Primaire;
+}
+
+.restaurants {
+  padding: 48px 16px;
+  background-color: $gray-dark;
+}
+.restaurant-box {
+  height: 280px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.box-image {
+  height: 75%;
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+.box-info {
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+.box-infotext {
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+.white{
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color : #000
+
 }

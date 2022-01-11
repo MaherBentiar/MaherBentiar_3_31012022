@@ -1,0 +1,24 @@
+.footer {
+    background: #353535 ;
+    padding: 24px 16px;
+    h2 {
+        margin-top: 0;
+        color: white;
+        font-family: 'Shrikhand';
+        font-weight: 400;
+    }
+    div {
+        color: white;
+        i {
+            margin-right: 10px;
+        }
+        p {
+            margin: 10px 0;
+        }
+    }
+}
+
+.footer-flex {
+    display: flex;
+    align-items: center;
+}
