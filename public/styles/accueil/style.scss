@@ -1,0 +1,28 @@
+@import '../general/variables.scss';
+* {
+    font-family: 'Roboto';
+}
+.hero {
+        background-color: $gray;
+        padding: 32px 24px;
+    h2 {
+        font-family: 'Roboto';
+        text-align: center;
+        margin: 0;
+    }
+    p {
+        text-align: center;
+    }
+    button {
+        display: block;
+        margin: auto;
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        padding: 16px;
+        font-weight: 900;
+        background: linear-gradient($Secondaire, $Primaire);
+        color: white;
+
+    }
+}

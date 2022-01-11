@@ -1,0 +1,29 @@
+* {
+  font-family: "Roboto";
+}
+
+.hero {
+  background-color: #f6f6f6;
+  padding: 32px 24px;
+}
+.hero h2 {
+  font-family: "Roboto";
+  text-align: center;
+  margin: 0;
+}
+.hero p {
+  text-align: center;
+}
+.hero button {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  padding: 16px;
+  font-weight: 900;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
