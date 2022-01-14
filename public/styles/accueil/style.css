@@ -1,16 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 
 a {
@@ -20,8 +19,7 @@ a {
 
 * {
   font-family: "Roboto";
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h2,
@@ -36,16 +34,13 @@ h6 {
   background-color: #f6f6f6;
   padding: 32px 24px;
 }
-
 .hero h2 {
   text-align: center;
   margin: 0;
 }
-
 .hero p {
   text-align: center;
 }
-
 .hero button {
   display: block;
   margin: auto;
@@ -54,9 +49,14 @@ h6 {
   border-radius: 30px;
   padding: 16px;
   font-weight: 900;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(#e69ed1, #ae73f7);
+  transition: transform 0.3s;
   color: white;
+}
+.hero button:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.97);
+  background: linear-gradient(#ff79da, #9356dc);
 }
 
 .fonctionnement {
@@ -66,17 +66,17 @@ h6 {
 .fonctionnement-box {
   position: relative;
   background: #f6f6f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 24px;
   border-radius: 24px;
   padding: 10px 0;
+  transition: transform 0.3s;
 }
-
+.fonctionnement-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.418);
+}
 .fonctionnement-box span {
   position: absolute;
   left: -20px;
@@ -84,20 +84,13 @@ h6 {
   border-radius: 50%;
   min-width: 24px;
   min-height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   color: white;
   font-size: 14px;
   margin-left: 10px;
 }
-
 .fonctionnement-box i,
 .fonctionnement-box p {
   margin-left: 40px;
@@ -125,33 +118,39 @@ h6 {
 
 .box-image {
   height: 75%;
+  position: relative;
 }
-
 .box-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
+  transition: 0.3s;
+}
+.box-image img:hover {
+  transform: scale(1.2);
+}
+.box-image span {
+  background: #99e2d0;
+  padding: 6px;
+  border-radius: 5px;
+  color: #239c7e;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-weight: 700;
 }
 
 .box-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px;
 }
 
 .box-infotext h3 {
   margin: 0;
 }
-
 .box-infotext p {
   margin-top: 5px;
   margin-bottom: 0;
@@ -161,6 +160,15 @@ h6 {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
+  transition: background 0.3s;
+}
+.white:hover {
+  display: inline !important;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 0.05px;
 }
 
 /* Grands ecrans */
@@ -169,21 +177,83 @@ h6 {
     width: 70%;
     margin: 0 auto;
   }
+
   .box-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
+
   .restaurant-box {
     width: 520px;
   }
+
   .restaurants h2 {
     text-align: center;
     font-size: 48px;
   }
 }
+/* Loader */
+.loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3e7de;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation: visible ease-in-out 2s reverse both;
+}
+
+.loader-outer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #9356dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader-outer 1s ease-in infinite;
+}
+
+.loader-inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #ff79da;
+  animation: loader-inner 1s ease-in infinite;
+}
+
+/* Animation loader */
+@keyframes visible {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+@keyframes loader-outer {
+  to {
+    border-color: #9356dc;
+    transform: scale(1);
+  }
+  from {
+    border-color: #ff79da;
+    transform: scale(1.2);
+  }
+}
+@keyframes loader-inner {
+  to {
+    border-color: #ff79da;
+    transform: scale(1);
+  }
+  from {
+    border-color: #9356dc;
+    transform: scale(1.2);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

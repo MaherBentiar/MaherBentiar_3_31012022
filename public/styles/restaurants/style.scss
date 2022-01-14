@@ -86,6 +86,15 @@ hr {
 }
 
 
+/* classe accordian  */
+
+@for $i from 1 through 10 {
+    .accordian-#{$i}{
+        text-align: center;
+        animation: accordian #{$i * 1s/4} ease-in;
+    }
+}
+
 /*  Ecrans grande taille */
 
 @media only screen and (min-width: 768px){
@@ -96,5 +105,15 @@ hr {
     .menu {
         width: 70%;
         margin: 0 auto;
+    }
+}
+
+// Animation accordian
+@keyframes accordian {
+    @for $i from 1 through 100 {
+        #{$i * 1%}{
+            opacity: #{$i * 1%};
+            transform: translateY(#{-100% + $i});
+        }
     }
 }

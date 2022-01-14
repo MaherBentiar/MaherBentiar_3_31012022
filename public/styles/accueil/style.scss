@@ -30,8 +30,14 @@ h6 {
     border-radius: 30px;
     padding: 16px;
     font-weight: 900;
-    background: linear-gradient($Secondaire, $Primaire);
+    background: linear-gradient(#e69ed1, #ae73f7);
+    transition: transform 0.3s;
     color: white;
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.97);
+      background: linear-gradient($Secondaire, $Primaire);
+    }
   }
 }
 
@@ -46,6 +52,11 @@ h6 {
   margin-bottom: 24px;
   border-radius: 24px;
   padding: 10px 0;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.418);
+  }
   span {
     position: absolute;
     left: -20px;
@@ -85,10 +96,25 @@ h6 {
 
 .box-image {
   height: 75%;
+  position: relative;
   img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  span {
+    background: $Tertiaire;
+    padding: 6px;
+    border-radius: 5px;
+    color: #239c7e;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-weight: 700;
   }
 }
 .box-info {
@@ -107,13 +133,21 @@ h6 {
     margin-bottom: 0;
   }
 }
-.white{
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width:1px;
-    -webkit-text-stroke-color : #000
+.white {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  transition: background 0.3s;
 
+  &:hover {
+    display: inline !important;
+    background: linear-gradient($Primaire, $Secondaire);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-width: 0.05px;
+  }
 }
-
 
 /* Grands ecrans */
 
@@ -133,5 +167,68 @@ h6 {
   .restaurants h2 {
     text-align: center;
     font-size: 48px;
+  }
+}
+
+/* Loader */
+.loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(227, 231, 222);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation: visible ease-in-out 2s reverse both;
+}
+.loader-outer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid $Primaire;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader-outer 1s ease-in infinite;
+}
+.loader-inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid $Secondaire;
+  animation: loader-inner 1s ease-in infinite;
+}
+
+/* Animation loader */
+
+@keyframes visible {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+@keyframes loader-outer {
+  to {
+    border-color: $Primaire;
+    transform: scale(1);
+  }
+  from {
+    border-color: $Secondaire;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes loader-inner {
+  to {
+    border-color: $Secondaire;
+    transform: scale(1);
+  }
+  from {
+    border-color: $Primaire;
+    transform: scale(1.2);
   }
 }
