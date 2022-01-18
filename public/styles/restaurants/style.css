@@ -28,6 +28,15 @@ a {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
+  transition: background 0.3s;
+}
+.white:hover {
+  display: inline !important;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 0.05px;
 }
 
 .banner {
@@ -83,9 +92,12 @@ a {
   border-radius: 20px;
   margin-bottom: 16px;
   padding: 16px;
+  position: relative;
+  overflow: hidden;
 }
 .menu-item h4 {
   margin: 0;
+  text-align: left;
 }
 
 .menu-item-info {
@@ -95,6 +107,9 @@ a {
 }
 .menu-item-info p {
   margin: 8px 0 0 0;
+}
+.menu-item-info strong {
+  transition: margin 1.5s;
 }
 
 hr {
@@ -113,52 +128,42 @@ hr {
 
 /* classe accordian  */
 .accordian-1 {
-  text-align: center;
   animation: accordian 0.25s ease-in;
 }
 
 .accordian-2 {
-  text-align: center;
   animation: accordian 0.5s ease-in;
 }
 
 .accordian-3 {
-  text-align: center;
   animation: accordian 0.75s ease-in;
 }
 
 .accordian-4 {
-  text-align: center;
   animation: accordian 1s ease-in;
 }
 
 .accordian-5 {
-  text-align: center;
   animation: accordian 1.25s ease-in;
 }
 
 .accordian-6 {
-  text-align: center;
   animation: accordian 1.5s ease-in;
 }
 
 .accordian-7 {
-  text-align: center;
   animation: accordian 1.75s ease-in;
 }
 
 .accordian-8 {
-  text-align: center;
   animation: accordian 2s ease-in;
 }
 
 .accordian-9 {
-  text-align: center;
   animation: accordian 2.25s ease-in;
 }
 
 .accordian-10 {
-  text-align: center;
   animation: accordian 2.5s ease-in;
 }
 
@@ -574,6 +579,47 @@ hr {
   100% {
     opacity: 100%;
     transform: translateY(0%);
+  }
+}
+.selected {
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18%;
+  color: white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -200px;
+  transition: 1.3s;
+}
+
+.menu-item:hover .selected {
+  right: 0;
+}
+
+.menu-item:hover .selected i {
+  animation: rotation 2s ease;
+}
+
+.menu-item:hover .menu-item-info strong {
+  margin-right: 20%;
+}
+
+.menu-item:hover .menu-item-info p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 60%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

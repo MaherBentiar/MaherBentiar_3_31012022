@@ -1,119 +1,172 @@
 @import "../general/general.scss";
 @import "../general/variables.scss";
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:  0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
 }
-.white{
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width:1px;
-    -webkit-text-stroke-color : #000
-
+.white {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  transition: background 0.3s;
+  &:hover {
+    display: inline !important;
+    background: linear-gradient($Primaire, $Secondaire);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-width: 0.05px;
+  }
 }
 .banner {
-    height: 250px;
-    background-position: top;
-    background-size: cover;
-    position: relative;
+  height: 250px;
+  background-position: top;
+  background-size: cover;
+  position: relative;
 }
 .francaise {
-    background-image:  url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-   
+  background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 .note {
-    background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 .delice {
-    background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 .palette {
-    background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 .menu-container {
-    padding :32px 16px;
-    background: #f4f4f4;
-    margin-bottom: -48px;
-    position: relative;
-    bottom: 48px;
-    z-index: 10;
-    border-radius: 40px 40px 0 0;
-    position: relative;
-    h3 {
-        margin-bottom: 5px;
-    }
+  padding: 32px 16px;
+  background: #f4f4f4;
+  margin-bottom: -48px;
+  position: relative;
+  bottom: 48px;
+  z-index: 10;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  h3 {
+    margin-bottom: 5px;
+  }
 }
 .menu-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    h2 {
-        margin: 0;
-        font-family: 'Shrikhand';
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  h2 {
+    margin: 0;
+    font-family: "Shrikhand";
+  }
 }
 
 .menu-item {
-    background: white;
-    border-radius: 20px;
-    margin-bottom: 16px;
-    padding: 16px;
-    h4 {
-        margin: 0;
-    }
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  h4 {
+    margin: 0;
+    text-align: left;
+  }
 }
 .menu-item-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    p {
-        margin: 8px 0 0 0;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    margin: 8px 0 0 0;
+  }
+  strong {
+    transition: margin 1.5s;
+  }
 }
 hr {
-    width: 50px;
-    position: absolute;
-    margin-bottom: 16px;
-    display: block;
-    background: $Tertiaire;
-    height: 3px;
-    border:  none;
+  width: 50px;
+  position: absolute;
+  margin-bottom: 16px;
+  display: block;
+  background: $Tertiaire;
+  height: 3px;
+  border: none;
 }
 .first {
-    margin-top: 24px;
+  margin-top: 24px;
 }
-
 
 /* classe accordian  */
 
 @for $i from 1 through 10 {
-    .accordian-#{$i}{
-        text-align: center;
-        animation: accordian #{$i * 1s/4} ease-in;
-    }
+  .accordian-#{$i} {
+    animation: accordian #{$i * 1s/4} ease-in;
+  }
 }
 
 /*  Ecrans grande taille */
 
-@media only screen and (min-width: 768px){
-    .banner {
-        height: 500px;
-        background-position: center;
-    }
-    .menu {
-        width: 70%;
-        margin: 0 auto;
-    }
+@media only screen and (min-width: 768px) {
+  .banner {
+    height: 500px;
+    background-position: center;
+  }
+  .menu {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 // Animation accordian
 @keyframes accordian {
-    @for $i from 1 through 100 {
-        #{$i * 1%}{
-            opacity: #{$i * 1%};
-            transform: translateY(#{-100% + $i});
-        }
+  @for $i from 1 through 100 {
+    #{$i * 1%} {
+      opacity: #{$i * 1%};
+      transform: translateY(#{-100% + $i});
     }
+  }
+}
+
+// selected icon
+
+.selected {
+  background-color: $Tertiaire;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18%;
+  color: white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -200px;
+  transition: 1.3s;
+}
+.menu-item:hover .selected {
+  right: 0;
+}
+
+.menu-item:hover .selected i {
+  animation: rotation 2s ease;
+}
+.menu-item:hover .menu-item-info strong {
+  margin-right: 20%;
+}
+.menu-item:hover .menu-item-info p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 60%;
+}
+/// Icon rotation
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
