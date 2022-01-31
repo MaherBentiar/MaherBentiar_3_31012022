@@ -1,15 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
 }
 
 a {
@@ -18,9 +19,15 @@ a {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 16px;
 }
 
@@ -28,10 +35,13 @@ a {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
+  -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
+
 .white:hover {
   display: inline !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -72,16 +82,24 @@ a {
   border-radius: 40px 40px 0 0;
   position: relative;
 }
+
 .menu-container h3 {
   margin-bottom: 5px;
 }
 
 .menu-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 5%;
 }
+
 .menu-title h2 {
   margin: 0;
   font-family: "Shrikhand";
@@ -95,20 +113,30 @@ a {
   position: relative;
   overflow: hidden;
 }
+
 .menu-item h4 {
   margin: 0;
   text-align: left;
 }
 
 .menu-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .menu-item-info p {
   margin: 8px 0 0 0;
 }
+
 .menu-item-info strong {
+  -webkit-transition: margin 1.5s;
   transition: margin 1.5s;
 }
 
@@ -128,43 +156,53 @@ hr {
 
 /* classe accordian  */
 .accordian-1 {
-  animation: accordian 0.25s ease-in;
+  -webkit-animation: accordian 0.25s ease-in;
+          animation: accordian 0.25s ease-in;
 }
 
 .accordian-2 {
-  animation: accordian 0.5s ease-in;
+  -webkit-animation: accordian 0.5s ease-in;
+          animation: accordian 0.5s ease-in;
 }
 
 .accordian-3 {
-  animation: accordian 0.75s ease-in;
+  -webkit-animation: accordian 0.75s ease-in;
+          animation: accordian 0.75s ease-in;
 }
 
 .accordian-4 {
-  animation: accordian 1s ease-in;
+  -webkit-animation: accordian 1s ease-in;
+          animation: accordian 1s ease-in;
 }
 
 .accordian-5 {
-  animation: accordian 1.25s ease-in;
+  -webkit-animation: accordian 1.25s ease-in;
+          animation: accordian 1.25s ease-in;
 }
 
 .accordian-6 {
-  animation: accordian 1.5s ease-in;
+  -webkit-animation: accordian 1.5s ease-in;
+          animation: accordian 1.5s ease-in;
 }
 
 .accordian-7 {
-  animation: accordian 1.75s ease-in;
+  -webkit-animation: accordian 1.75s ease-in;
+          animation: accordian 1.75s ease-in;
 }
 
 .accordian-8 {
-  animation: accordian 2s ease-in;
+  -webkit-animation: accordian 2s ease-in;
+          animation: accordian 2s ease-in;
 }
 
 .accordian-9 {
-  animation: accordian 2.25s ease-in;
+  -webkit-animation: accordian 2.25s ease-in;
+          animation: accordian 2.25s ease-in;
 }
 
 .accordian-10 {
-  animation: accordian 2.5s ease-in;
+  -webkit-animation: accordian 2.5s ease-in;
+          animation: accordian 2.5s ease-in;
 }
 
 /*  Ecrans grande taille */
@@ -173,425 +211,1036 @@ hr {
     height: 500px;
     background-position: center;
   }
-
   .menu {
     width: 70%;
     margin: 0 auto;
   }
 }
-@keyframes accordian {
+
+@-webkit-keyframes accordian {
   1% {
     opacity: 1%;
-    transform: translateY(-99%);
+    -webkit-transform: translateY(-99%);
+            transform: translateY(-99%);
   }
   2% {
     opacity: 2%;
-    transform: translateY(-98%);
+    -webkit-transform: translateY(-98%);
+            transform: translateY(-98%);
   }
   3% {
     opacity: 3%;
-    transform: translateY(-97%);
+    -webkit-transform: translateY(-97%);
+            transform: translateY(-97%);
   }
   4% {
     opacity: 4%;
-    transform: translateY(-96%);
+    -webkit-transform: translateY(-96%);
+            transform: translateY(-96%);
   }
   5% {
     opacity: 5%;
-    transform: translateY(-95%);
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
   }
   6% {
     opacity: 6%;
-    transform: translateY(-94%);
+    -webkit-transform: translateY(-94%);
+            transform: translateY(-94%);
   }
   7% {
     opacity: 7%;
-    transform: translateY(-93%);
+    -webkit-transform: translateY(-93%);
+            transform: translateY(-93%);
   }
   8% {
     opacity: 8%;
-    transform: translateY(-92%);
+    -webkit-transform: translateY(-92%);
+            transform: translateY(-92%);
   }
   9% {
     opacity: 9%;
-    transform: translateY(-91%);
+    -webkit-transform: translateY(-91%);
+            transform: translateY(-91%);
   }
   10% {
     opacity: 10%;
-    transform: translateY(-90%);
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
   }
   11% {
     opacity: 11%;
-    transform: translateY(-89%);
+    -webkit-transform: translateY(-89%);
+            transform: translateY(-89%);
   }
   12% {
     opacity: 12%;
-    transform: translateY(-88%);
+    -webkit-transform: translateY(-88%);
+            transform: translateY(-88%);
   }
   13% {
     opacity: 13%;
-    transform: translateY(-87%);
+    -webkit-transform: translateY(-87%);
+            transform: translateY(-87%);
   }
   14% {
     opacity: 14%;
-    transform: translateY(-86%);
+    -webkit-transform: translateY(-86%);
+            transform: translateY(-86%);
   }
   15% {
     opacity: 15%;
-    transform: translateY(-85%);
+    -webkit-transform: translateY(-85%);
+            transform: translateY(-85%);
   }
   16% {
     opacity: 16%;
-    transform: translateY(-84%);
+    -webkit-transform: translateY(-84%);
+            transform: translateY(-84%);
   }
   17% {
     opacity: 17%;
-    transform: translateY(-83%);
+    -webkit-transform: translateY(-83%);
+            transform: translateY(-83%);
   }
   18% {
     opacity: 18%;
-    transform: translateY(-82%);
+    -webkit-transform: translateY(-82%);
+            transform: translateY(-82%);
   }
   19% {
     opacity: 19%;
-    transform: translateY(-81%);
+    -webkit-transform: translateY(-81%);
+            transform: translateY(-81%);
   }
   20% {
     opacity: 20%;
-    transform: translateY(-80%);
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%);
   }
   21% {
     opacity: 21%;
-    transform: translateY(-79%);
+    -webkit-transform: translateY(-79%);
+            transform: translateY(-79%);
   }
   22% {
     opacity: 22%;
-    transform: translateY(-78%);
+    -webkit-transform: translateY(-78%);
+            transform: translateY(-78%);
   }
   23% {
     opacity: 23%;
-    transform: translateY(-77%);
+    -webkit-transform: translateY(-77%);
+            transform: translateY(-77%);
   }
   24% {
     opacity: 24%;
-    transform: translateY(-76%);
+    -webkit-transform: translateY(-76%);
+            transform: translateY(-76%);
   }
   25% {
     opacity: 25%;
-    transform: translateY(-75%);
+    -webkit-transform: translateY(-75%);
+            transform: translateY(-75%);
   }
   26% {
     opacity: 26%;
-    transform: translateY(-74%);
+    -webkit-transform: translateY(-74%);
+            transform: translateY(-74%);
   }
   27% {
     opacity: 27%;
-    transform: translateY(-73%);
+    -webkit-transform: translateY(-73%);
+            transform: translateY(-73%);
   }
   28% {
     opacity: 28%;
-    transform: translateY(-72%);
+    -webkit-transform: translateY(-72%);
+            transform: translateY(-72%);
   }
   29% {
     opacity: 29%;
-    transform: translateY(-71%);
+    -webkit-transform: translateY(-71%);
+            transform: translateY(-71%);
   }
   30% {
     opacity: 30%;
-    transform: translateY(-70%);
+    -webkit-transform: translateY(-70%);
+            transform: translateY(-70%);
   }
   31% {
     opacity: 31%;
-    transform: translateY(-69%);
+    -webkit-transform: translateY(-69%);
+            transform: translateY(-69%);
   }
   32% {
     opacity: 32%;
-    transform: translateY(-68%);
+    -webkit-transform: translateY(-68%);
+            transform: translateY(-68%);
   }
   33% {
     opacity: 33%;
-    transform: translateY(-67%);
+    -webkit-transform: translateY(-67%);
+            transform: translateY(-67%);
   }
   34% {
     opacity: 34%;
-    transform: translateY(-66%);
+    -webkit-transform: translateY(-66%);
+            transform: translateY(-66%);
   }
   35% {
     opacity: 35%;
-    transform: translateY(-65%);
+    -webkit-transform: translateY(-65%);
+            transform: translateY(-65%);
   }
   36% {
     opacity: 36%;
-    transform: translateY(-64%);
+    -webkit-transform: translateY(-64%);
+            transform: translateY(-64%);
   }
   37% {
     opacity: 37%;
-    transform: translateY(-63%);
+    -webkit-transform: translateY(-63%);
+            transform: translateY(-63%);
   }
   38% {
     opacity: 38%;
-    transform: translateY(-62%);
+    -webkit-transform: translateY(-62%);
+            transform: translateY(-62%);
   }
   39% {
     opacity: 39%;
-    transform: translateY(-61%);
+    -webkit-transform: translateY(-61%);
+            transform: translateY(-61%);
   }
   40% {
     opacity: 40%;
-    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
   }
   41% {
     opacity: 41%;
-    transform: translateY(-59%);
+    -webkit-transform: translateY(-59%);
+            transform: translateY(-59%);
   }
   42% {
     opacity: 42%;
-    transform: translateY(-58%);
+    -webkit-transform: translateY(-58%);
+            transform: translateY(-58%);
   }
   43% {
     opacity: 43%;
-    transform: translateY(-57%);
+    -webkit-transform: translateY(-57%);
+            transform: translateY(-57%);
   }
   44% {
     opacity: 44%;
-    transform: translateY(-56%);
+    -webkit-transform: translateY(-56%);
+            transform: translateY(-56%);
   }
   45% {
     opacity: 45%;
-    transform: translateY(-55%);
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
   }
   46% {
     opacity: 46%;
-    transform: translateY(-54%);
+    -webkit-transform: translateY(-54%);
+            transform: translateY(-54%);
   }
   47% {
     opacity: 47%;
-    transform: translateY(-53%);
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
   }
   48% {
     opacity: 48%;
-    transform: translateY(-52%);
+    -webkit-transform: translateY(-52%);
+            transform: translateY(-52%);
   }
   49% {
     opacity: 49%;
-    transform: translateY(-51%);
+    -webkit-transform: translateY(-51%);
+            transform: translateY(-51%);
   }
   50% {
     opacity: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   51% {
     opacity: 51%;
-    transform: translateY(-49%);
+    -webkit-transform: translateY(-49%);
+            transform: translateY(-49%);
   }
   52% {
     opacity: 52%;
-    transform: translateY(-48%);
+    -webkit-transform: translateY(-48%);
+            transform: translateY(-48%);
   }
   53% {
     opacity: 53%;
-    transform: translateY(-47%);
+    -webkit-transform: translateY(-47%);
+            transform: translateY(-47%);
   }
   54% {
     opacity: 54%;
-    transform: translateY(-46%);
+    -webkit-transform: translateY(-46%);
+            transform: translateY(-46%);
   }
   55% {
     opacity: 55%;
-    transform: translateY(-45%);
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
   }
   56% {
     opacity: 56%;
-    transform: translateY(-44%);
+    -webkit-transform: translateY(-44%);
+            transform: translateY(-44%);
   }
   57% {
     opacity: 57%;
-    transform: translateY(-43%);
+    -webkit-transform: translateY(-43%);
+            transform: translateY(-43%);
   }
   58% {
     opacity: 58%;
-    transform: translateY(-42%);
+    -webkit-transform: translateY(-42%);
+            transform: translateY(-42%);
   }
   59% {
     opacity: 59%;
-    transform: translateY(-41%);
+    -webkit-transform: translateY(-41%);
+            transform: translateY(-41%);
   }
   60% {
     opacity: 60%;
-    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
   }
   61% {
     opacity: 61%;
-    transform: translateY(-39%);
+    -webkit-transform: translateY(-39%);
+            transform: translateY(-39%);
   }
   62% {
     opacity: 62%;
-    transform: translateY(-38%);
+    -webkit-transform: translateY(-38%);
+            transform: translateY(-38%);
   }
   63% {
     opacity: 63%;
-    transform: translateY(-37%);
+    -webkit-transform: translateY(-37%);
+            transform: translateY(-37%);
   }
   64% {
     opacity: 64%;
-    transform: translateY(-36%);
+    -webkit-transform: translateY(-36%);
+            transform: translateY(-36%);
   }
   65% {
     opacity: 65%;
-    transform: translateY(-35%);
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
   }
   66% {
     opacity: 66%;
-    transform: translateY(-34%);
+    -webkit-transform: translateY(-34%);
+            transform: translateY(-34%);
   }
   67% {
     opacity: 67%;
-    transform: translateY(-33%);
+    -webkit-transform: translateY(-33%);
+            transform: translateY(-33%);
   }
   68% {
     opacity: 68%;
-    transform: translateY(-32%);
+    -webkit-transform: translateY(-32%);
+            transform: translateY(-32%);
   }
   69% {
     opacity: 69%;
-    transform: translateY(-31%);
+    -webkit-transform: translateY(-31%);
+            transform: translateY(-31%);
   }
   70% {
     opacity: 70%;
-    transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
   }
   71% {
     opacity: 71%;
-    transform: translateY(-29%);
+    -webkit-transform: translateY(-29%);
+            transform: translateY(-29%);
   }
   72% {
     opacity: 72%;
-    transform: translateY(-28%);
+    -webkit-transform: translateY(-28%);
+            transform: translateY(-28%);
   }
   73% {
     opacity: 73%;
-    transform: translateY(-27%);
+    -webkit-transform: translateY(-27%);
+            transform: translateY(-27%);
   }
   74% {
     opacity: 74%;
-    transform: translateY(-26%);
+    -webkit-transform: translateY(-26%);
+            transform: translateY(-26%);
   }
   75% {
     opacity: 75%;
-    transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
   }
   76% {
     opacity: 76%;
-    transform: translateY(-24%);
+    -webkit-transform: translateY(-24%);
+            transform: translateY(-24%);
   }
   77% {
     opacity: 77%;
-    transform: translateY(-23%);
+    -webkit-transform: translateY(-23%);
+            transform: translateY(-23%);
   }
   78% {
     opacity: 78%;
-    transform: translateY(-22%);
+    -webkit-transform: translateY(-22%);
+            transform: translateY(-22%);
   }
   79% {
     opacity: 79%;
-    transform: translateY(-21%);
+    -webkit-transform: translateY(-21%);
+            transform: translateY(-21%);
   }
   80% {
     opacity: 80%;
-    transform: translateY(-20%);
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
   }
   81% {
     opacity: 81%;
-    transform: translateY(-19%);
+    -webkit-transform: translateY(-19%);
+            transform: translateY(-19%);
   }
   82% {
     opacity: 82%;
-    transform: translateY(-18%);
+    -webkit-transform: translateY(-18%);
+            transform: translateY(-18%);
   }
   83% {
     opacity: 83%;
-    transform: translateY(-17%);
+    -webkit-transform: translateY(-17%);
+            transform: translateY(-17%);
   }
   84% {
     opacity: 84%;
-    transform: translateY(-16%);
+    -webkit-transform: translateY(-16%);
+            transform: translateY(-16%);
   }
   85% {
     opacity: 85%;
-    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
   }
   86% {
     opacity: 86%;
-    transform: translateY(-14%);
+    -webkit-transform: translateY(-14%);
+            transform: translateY(-14%);
   }
   87% {
     opacity: 87%;
-    transform: translateY(-13%);
+    -webkit-transform: translateY(-13%);
+            transform: translateY(-13%);
   }
   88% {
     opacity: 88%;
-    transform: translateY(-12%);
+    -webkit-transform: translateY(-12%);
+            transform: translateY(-12%);
   }
   89% {
     opacity: 89%;
-    transform: translateY(-11%);
+    -webkit-transform: translateY(-11%);
+            transform: translateY(-11%);
   }
   90% {
     opacity: 90%;
-    transform: translateY(-10%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   91% {
     opacity: 91%;
-    transform: translateY(-9%);
+    -webkit-transform: translateY(-9%);
+            transform: translateY(-9%);
   }
   92% {
     opacity: 92%;
-    transform: translateY(-8%);
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
   }
   93% {
     opacity: 93%;
-    transform: translateY(-7%);
+    -webkit-transform: translateY(-7%);
+            transform: translateY(-7%);
   }
   94% {
     opacity: 94%;
-    transform: translateY(-6%);
+    -webkit-transform: translateY(-6%);
+            transform: translateY(-6%);
   }
   95% {
     opacity: 95%;
-    transform: translateY(-5%);
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
   96% {
     opacity: 96%;
-    transform: translateY(-4%);
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
   }
   97% {
     opacity: 97%;
-    transform: translateY(-3%);
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
   }
   98% {
     opacity: 98%;
-    transform: translateY(-2%);
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
   }
   99% {
     opacity: 99%;
-    transform: translateY(-1%);
+    -webkit-transform: translateY(-1%);
+            transform: translateY(-1%);
   }
   100% {
     opacity: 100%;
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
+
+@keyframes accordian {
+  1% {
+    opacity: 1%;
+    -webkit-transform: translateY(-99%);
+            transform: translateY(-99%);
+  }
+  2% {
+    opacity: 2%;
+    -webkit-transform: translateY(-98%);
+            transform: translateY(-98%);
+  }
+  3% {
+    opacity: 3%;
+    -webkit-transform: translateY(-97%);
+            transform: translateY(-97%);
+  }
+  4% {
+    opacity: 4%;
+    -webkit-transform: translateY(-96%);
+            transform: translateY(-96%);
+  }
+  5% {
+    opacity: 5%;
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
+  }
+  6% {
+    opacity: 6%;
+    -webkit-transform: translateY(-94%);
+            transform: translateY(-94%);
+  }
+  7% {
+    opacity: 7%;
+    -webkit-transform: translateY(-93%);
+            transform: translateY(-93%);
+  }
+  8% {
+    opacity: 8%;
+    -webkit-transform: translateY(-92%);
+            transform: translateY(-92%);
+  }
+  9% {
+    opacity: 9%;
+    -webkit-transform: translateY(-91%);
+            transform: translateY(-91%);
+  }
+  10% {
+    opacity: 10%;
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
+  }
+  11% {
+    opacity: 11%;
+    -webkit-transform: translateY(-89%);
+            transform: translateY(-89%);
+  }
+  12% {
+    opacity: 12%;
+    -webkit-transform: translateY(-88%);
+            transform: translateY(-88%);
+  }
+  13% {
+    opacity: 13%;
+    -webkit-transform: translateY(-87%);
+            transform: translateY(-87%);
+  }
+  14% {
+    opacity: 14%;
+    -webkit-transform: translateY(-86%);
+            transform: translateY(-86%);
+  }
+  15% {
+    opacity: 15%;
+    -webkit-transform: translateY(-85%);
+            transform: translateY(-85%);
+  }
+  16% {
+    opacity: 16%;
+    -webkit-transform: translateY(-84%);
+            transform: translateY(-84%);
+  }
+  17% {
+    opacity: 17%;
+    -webkit-transform: translateY(-83%);
+            transform: translateY(-83%);
+  }
+  18% {
+    opacity: 18%;
+    -webkit-transform: translateY(-82%);
+            transform: translateY(-82%);
+  }
+  19% {
+    opacity: 19%;
+    -webkit-transform: translateY(-81%);
+            transform: translateY(-81%);
+  }
+  20% {
+    opacity: 20%;
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%);
+  }
+  21% {
+    opacity: 21%;
+    -webkit-transform: translateY(-79%);
+            transform: translateY(-79%);
+  }
+  22% {
+    opacity: 22%;
+    -webkit-transform: translateY(-78%);
+            transform: translateY(-78%);
+  }
+  23% {
+    opacity: 23%;
+    -webkit-transform: translateY(-77%);
+            transform: translateY(-77%);
+  }
+  24% {
+    opacity: 24%;
+    -webkit-transform: translateY(-76%);
+            transform: translateY(-76%);
+  }
+  25% {
+    opacity: 25%;
+    -webkit-transform: translateY(-75%);
+            transform: translateY(-75%);
+  }
+  26% {
+    opacity: 26%;
+    -webkit-transform: translateY(-74%);
+            transform: translateY(-74%);
+  }
+  27% {
+    opacity: 27%;
+    -webkit-transform: translateY(-73%);
+            transform: translateY(-73%);
+  }
+  28% {
+    opacity: 28%;
+    -webkit-transform: translateY(-72%);
+            transform: translateY(-72%);
+  }
+  29% {
+    opacity: 29%;
+    -webkit-transform: translateY(-71%);
+            transform: translateY(-71%);
+  }
+  30% {
+    opacity: 30%;
+    -webkit-transform: translateY(-70%);
+            transform: translateY(-70%);
+  }
+  31% {
+    opacity: 31%;
+    -webkit-transform: translateY(-69%);
+            transform: translateY(-69%);
+  }
+  32% {
+    opacity: 32%;
+    -webkit-transform: translateY(-68%);
+            transform: translateY(-68%);
+  }
+  33% {
+    opacity: 33%;
+    -webkit-transform: translateY(-67%);
+            transform: translateY(-67%);
+  }
+  34% {
+    opacity: 34%;
+    -webkit-transform: translateY(-66%);
+            transform: translateY(-66%);
+  }
+  35% {
+    opacity: 35%;
+    -webkit-transform: translateY(-65%);
+            transform: translateY(-65%);
+  }
+  36% {
+    opacity: 36%;
+    -webkit-transform: translateY(-64%);
+            transform: translateY(-64%);
+  }
+  37% {
+    opacity: 37%;
+    -webkit-transform: translateY(-63%);
+            transform: translateY(-63%);
+  }
+  38% {
+    opacity: 38%;
+    -webkit-transform: translateY(-62%);
+            transform: translateY(-62%);
+  }
+  39% {
+    opacity: 39%;
+    -webkit-transform: translateY(-61%);
+            transform: translateY(-61%);
+  }
+  40% {
+    opacity: 40%;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+  41% {
+    opacity: 41%;
+    -webkit-transform: translateY(-59%);
+            transform: translateY(-59%);
+  }
+  42% {
+    opacity: 42%;
+    -webkit-transform: translateY(-58%);
+            transform: translateY(-58%);
+  }
+  43% {
+    opacity: 43%;
+    -webkit-transform: translateY(-57%);
+            transform: translateY(-57%);
+  }
+  44% {
+    opacity: 44%;
+    -webkit-transform: translateY(-56%);
+            transform: translateY(-56%);
+  }
+  45% {
+    opacity: 45%;
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
+  }
+  46% {
+    opacity: 46%;
+    -webkit-transform: translateY(-54%);
+            transform: translateY(-54%);
+  }
+  47% {
+    opacity: 47%;
+    -webkit-transform: translateY(-53%);
+            transform: translateY(-53%);
+  }
+  48% {
+    opacity: 48%;
+    -webkit-transform: translateY(-52%);
+            transform: translateY(-52%);
+  }
+  49% {
+    opacity: 49%;
+    -webkit-transform: translateY(-51%);
+            transform: translateY(-51%);
+  }
+  50% {
+    opacity: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  51% {
+    opacity: 51%;
+    -webkit-transform: translateY(-49%);
+            transform: translateY(-49%);
+  }
+  52% {
+    opacity: 52%;
+    -webkit-transform: translateY(-48%);
+            transform: translateY(-48%);
+  }
+  53% {
+    opacity: 53%;
+    -webkit-transform: translateY(-47%);
+            transform: translateY(-47%);
+  }
+  54% {
+    opacity: 54%;
+    -webkit-transform: translateY(-46%);
+            transform: translateY(-46%);
+  }
+  55% {
+    opacity: 55%;
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
+  }
+  56% {
+    opacity: 56%;
+    -webkit-transform: translateY(-44%);
+            transform: translateY(-44%);
+  }
+  57% {
+    opacity: 57%;
+    -webkit-transform: translateY(-43%);
+            transform: translateY(-43%);
+  }
+  58% {
+    opacity: 58%;
+    -webkit-transform: translateY(-42%);
+            transform: translateY(-42%);
+  }
+  59% {
+    opacity: 59%;
+    -webkit-transform: translateY(-41%);
+            transform: translateY(-41%);
+  }
+  60% {
+    opacity: 60%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+  61% {
+    opacity: 61%;
+    -webkit-transform: translateY(-39%);
+            transform: translateY(-39%);
+  }
+  62% {
+    opacity: 62%;
+    -webkit-transform: translateY(-38%);
+            transform: translateY(-38%);
+  }
+  63% {
+    opacity: 63%;
+    -webkit-transform: translateY(-37%);
+            transform: translateY(-37%);
+  }
+  64% {
+    opacity: 64%;
+    -webkit-transform: translateY(-36%);
+            transform: translateY(-36%);
+  }
+  65% {
+    opacity: 65%;
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
+  66% {
+    opacity: 66%;
+    -webkit-transform: translateY(-34%);
+            transform: translateY(-34%);
+  }
+  67% {
+    opacity: 67%;
+    -webkit-transform: translateY(-33%);
+            transform: translateY(-33%);
+  }
+  68% {
+    opacity: 68%;
+    -webkit-transform: translateY(-32%);
+            transform: translateY(-32%);
+  }
+  69% {
+    opacity: 69%;
+    -webkit-transform: translateY(-31%);
+            transform: translateY(-31%);
+  }
+  70% {
+    opacity: 70%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  71% {
+    opacity: 71%;
+    -webkit-transform: translateY(-29%);
+            transform: translateY(-29%);
+  }
+  72% {
+    opacity: 72%;
+    -webkit-transform: translateY(-28%);
+            transform: translateY(-28%);
+  }
+  73% {
+    opacity: 73%;
+    -webkit-transform: translateY(-27%);
+            transform: translateY(-27%);
+  }
+  74% {
+    opacity: 74%;
+    -webkit-transform: translateY(-26%);
+            transform: translateY(-26%);
+  }
+  75% {
+    opacity: 75%;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  76% {
+    opacity: 76%;
+    -webkit-transform: translateY(-24%);
+            transform: translateY(-24%);
+  }
+  77% {
+    opacity: 77%;
+    -webkit-transform: translateY(-23%);
+            transform: translateY(-23%);
+  }
+  78% {
+    opacity: 78%;
+    -webkit-transform: translateY(-22%);
+            transform: translateY(-22%);
+  }
+  79% {
+    opacity: 79%;
+    -webkit-transform: translateY(-21%);
+            transform: translateY(-21%);
+  }
+  80% {
+    opacity: 80%;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  81% {
+    opacity: 81%;
+    -webkit-transform: translateY(-19%);
+            transform: translateY(-19%);
+  }
+  82% {
+    opacity: 82%;
+    -webkit-transform: translateY(-18%);
+            transform: translateY(-18%);
+  }
+  83% {
+    opacity: 83%;
+    -webkit-transform: translateY(-17%);
+            transform: translateY(-17%);
+  }
+  84% {
+    opacity: 84%;
+    -webkit-transform: translateY(-16%);
+            transform: translateY(-16%);
+  }
+  85% {
+    opacity: 85%;
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  86% {
+    opacity: 86%;
+    -webkit-transform: translateY(-14%);
+            transform: translateY(-14%);
+  }
+  87% {
+    opacity: 87%;
+    -webkit-transform: translateY(-13%);
+            transform: translateY(-13%);
+  }
+  88% {
+    opacity: 88%;
+    -webkit-transform: translateY(-12%);
+            transform: translateY(-12%);
+  }
+  89% {
+    opacity: 89%;
+    -webkit-transform: translateY(-11%);
+            transform: translateY(-11%);
+  }
+  90% {
+    opacity: 90%;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  91% {
+    opacity: 91%;
+    -webkit-transform: translateY(-9%);
+            transform: translateY(-9%);
+  }
+  92% {
+    opacity: 92%;
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
+  }
+  93% {
+    opacity: 93%;
+    -webkit-transform: translateY(-7%);
+            transform: translateY(-7%);
+  }
+  94% {
+    opacity: 94%;
+    -webkit-transform: translateY(-6%);
+            transform: translateY(-6%);
+  }
+  95% {
+    opacity: 95%;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  96% {
+    opacity: 96%;
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
+  }
+  97% {
+    opacity: 97%;
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+  98% {
+    opacity: 98%;
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
+  }
+  99% {
+    opacity: 99%;
+    -webkit-transform: translateY(-1%);
+            transform: translateY(-1%);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 .selected {
   background-color: #99e2d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 18%;
   color: white;
   height: 100%;
   position: absolute;
   top: 0;
   right: -200px;
+  -webkit-transition: 1.3s;
   transition: 1.3s;
 }
 
@@ -600,7 +1249,8 @@ hr {
 }
 
 .menu-item:hover .selected i {
-  animation: rotation 2s ease;
+  -webkit-animation: rotation 2s ease;
+          animation: rotation 2s ease;
 }
 
 .menu-item:hover .menu-item-info strong {
@@ -614,13 +1264,25 @@ hr {
   width: 60%;
 }
 
-@keyframes rotation {
+@-webkit-keyframes rotation {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */

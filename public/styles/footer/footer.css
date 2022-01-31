@@ -2,32 +2,26 @@
   background: #353535;
   padding: 24px 16px;
 }
-
 .footer h2 {
   margin-top: 0;
   color: white;
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   font-weight: 400;
 }
-
 .footer div {
   color: white;
 }
-
 .footer div i {
   margin-right: 10px;
 }
-
 .footer div p {
+  color: white;
   margin: 10px 0;
 }
 
 .footer-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
+
 /*# sourceMappingURL=footer.css.map */
